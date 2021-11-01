@@ -4,7 +4,7 @@ import GlobalStyles from "./globals";
 import { useState } from "react";
 
 const Theme = ({ children }) => {
-	const [theme, setTheme] = useState("white");
+	const [theme, setTheme] = useState("light");
 	const toggleTheme = () => {
 		theme === "light" ? setTheme("light") : setTheme("dark");
 	};

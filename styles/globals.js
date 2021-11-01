@@ -19,7 +19,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     background-color: ${(props) => props.theme.background};
     cursor: default;
-    color :  ${(props) => props.theme.text}
+    color :  ${(props) => props.theme.text};
+    overflow-x: hidden;
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${(props) => props.theme.fontStyle};
