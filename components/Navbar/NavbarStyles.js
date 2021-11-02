@@ -26,6 +26,7 @@ export const NavLinks = styled.ul`
 		padding-top: 3.5rem;
 		transition: transform 0.3s ease-in-out;
 		align-items: center;
+		z-index: 998;
 	}
 `;
 
@@ -77,6 +78,7 @@ export const Hamburger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+	z-index: 999;
   }
 
   div {

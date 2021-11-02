@@ -19,7 +19,7 @@ const Navbar = () => {
 				<Link passHref href="/">
 					<Image
 						src="/kartikeylogo.svg"
-						alt="Vercel Logo"
+						alt="Kartikey Logo"
 						width={55}
 						height={50}
 					/>
