@@ -45,7 +45,6 @@ export const CardContainer = styled.div`
 	flex-direction: ${({ layout }) => layout || "row"};
 	gap: 2rem;
 	margin-bottom: 5rem;
-	${"" /* margin-top: -6rem; */}
 	&:first-of-type {
 		margin-top: -6rem;
 	}
@@ -55,21 +54,17 @@ export const CardContainer = styled.div`
 	}
 `;
 
-export const CardContainerContent = styled.div`
-	${"" /* display: flex; */}
-	${"" /* flex-direction: column; */}
-`;
+export const CardContainerContent = styled.div``;
 
 export const CardTitle = styled.div`
 	font-size: 2.75rem;
 	font-weight: 700;
 	margin-bottom: 1.5rem;
-	${"" /* margin-top: 3rem; */}
 `;
 
 export const CardDescription = styled.p`
 	font-size: 1.75rem;
-	${"" /* font-weight: 700; */}
+
 	margin-bottom: 1.5rem;
 `;
 

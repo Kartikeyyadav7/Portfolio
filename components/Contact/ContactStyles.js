@@ -38,8 +38,3 @@ export const Line = styled.div`
 	} */
 	}
 `;
-
-export const Description = styled.p`
-	font-size: 1.75rem;
-	line-height: 2.5rem;
-`;
