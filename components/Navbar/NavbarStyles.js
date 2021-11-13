@@ -4,7 +4,19 @@ export const Container = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 2rem 3rem;
+	${"" /* margin: 2rem 3rem; */}
+	position: fixed;
+	${"" /* height: 48px; */}
+	top: 0;
+	${"" /* width: 96%; */}
+	background: ${(props) =>
+		props.navbarColor ? props.theme.secondaryColor : "transparent"};
+	z-index: 1;
+
+	margin: 0 auto;
+	width: 100%;
+	padding: 3rem;
+	height: 8rem;
 `;
 
 export const Logo = styled.div``;

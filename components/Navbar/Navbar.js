@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,9 +12,22 @@ import { FiSun } from "react-icons/fi";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [navbarColor, setNavbarColor] = useState(false);
+
+	const onMouseScroll = () => {
+		if (window.scrollY >= 48) {
+			setNavbarColor(true);
+		} else {
+			setNavbarColor(false);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", onMouseScroll);
+	}, []);
 
 	return (
-		<Container>
+		<Container navbarColor={navbarColor}>
 			<Logo>
 				<Link passHref href="/">
 					<Image
@@ -33,19 +46,19 @@ const Navbar = () => {
 			</Hamburger>
 
 			<NavLinks open={isOpen}>
-				<Link href="#Home" passHref>
+				<Link href="/" passHref>
 					<NavLinkItem>Home</NavLinkItem>
 				</Link>
-				<Link href="#Skills" passHref>
+				<Link href="#skills" passHref>
 					<NavLinkItem>Skills</NavLinkItem>
 				</Link>
-				<Link href="#Projects" passHref>
+				<Link href="#projects" passHref>
 					<NavLinkItem>Projects</NavLinkItem>
 				</Link>
-				<Link href="#About" passHref>
+				<Link href="#about" passHref>
 					<NavLinkItem>About</NavLinkItem>
 				</Link>
-				<Link href="#Contact" passHref>
+				<Link href="#contact" passHref>
 					<NavLinkItem>Contact</NavLinkItem>
 				</Link>
 				<NavLinkItem>

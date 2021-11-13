@@ -17,7 +17,7 @@ import {
 
 const Projects = () => {
 	return (
-		<Container>
+		<Container id="projects">
 			<SectionTitle>Projects</SectionTitle>
 			<Line></Line>
 			{projects.map((item, index) => (

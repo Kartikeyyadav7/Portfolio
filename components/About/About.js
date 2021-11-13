@@ -3,7 +3,7 @@ import { Container, Description, Line, SectionTitle } from "./AboutStyles";
 
 const About = () => {
 	return (
-		<Container>
+		<Container id="about">
 			<SectionTitle>About Me</SectionTitle>
 			<Line></Line>
 			<Description>

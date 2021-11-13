@@ -17,7 +17,7 @@ import {
 
 const Skills = () => {
 	return (
-		<Container>
+		<Container id="skills">
 			<SectionTitle>Skills</SectionTitle>
 			<Line></Line>
 			<SkillCards>
