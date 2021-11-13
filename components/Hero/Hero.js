@@ -38,7 +38,7 @@ const Hero = () => {
 					<Image src="/headlight.svg" alt="Hero Img" width={370} height={380} />
 				</HeroImg>
 			</Container>
-			{/* <Link href="#skills" passHref>
+			<Link href="#skills" passHref>
 				<ScrollDown>
 					<Mouse>
 						<span></span>
@@ -47,7 +47,7 @@ const Hero = () => {
 						<span></span>
 					</Arrow>
 				</ScrollDown>
-			</Link> */}
+			</Link>
 		</>
 	);
 };
