@@ -29,7 +29,9 @@ export const NavLinks = styled.ul`
 
 	@media (max-width: 768px) {
 		flex-flow: column nowrap;
-		background-color: #0e3964;
+		${"" /* background-color: #0e3964; */}
+		background-color: ${(props) => props.theme.secondaryColor};
+		${"" /* background-color : ${(props) => props.theme.secondaryColor} */}
 		position: fixed;
 		transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 		top: 0;
@@ -49,7 +51,7 @@ export const NavLinkItem = styled.li`
 	list-style: none;
 	cursor: pointer;
 	@media (max-width: 768px) {
-		color: #fff;
+		color: ${(props) => props.theme.text};
 	}
 	&:last-child {
 		padding-right: 0px;
