@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdDesignServices } from "react-icons/md";
 import { FaReact, FaDatabase } from "react-icons/fa";
 import {
@@ -14,8 +14,10 @@ import {
 	SectionTitle,
 	SkillCards,
 } from "./SkillStyles";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 const Skills = () => {
+	const [theme, setTheme] = useContext(ThemeContext);
 	return (
 		<Container id="skills">
 			<SectionTitle>Skills</SectionTitle>
@@ -23,9 +25,17 @@ const Skills = () => {
 			<SkillCards>
 				<Card>
 					<CardImgContainer>
-						<FaReact
-							style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
-						/>
+						{theme === "dark" ? (
+							<FaReact
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="white"
+							/>
+						) : (
+							<FaReact
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="black"
+							/>
+						)}
 					</CardImgContainer>
 					{/* <CardDetailsContainer> */}
 					<CardTitle>Frontend</CardTitle>
@@ -44,9 +54,17 @@ const Skills = () => {
 				</Card>
 				<Card>
 					<CardImgContainer>
-						<FaDatabase
-							style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
-						/>
+						{theme === "dark" ? (
+							<FaDatabase
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="white"
+							/>
+						) : (
+							<FaDatabase
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="black"
+							/>
+						)}
 					</CardImgContainer>
 					{/* <CardDetailsContainer> */}
 					<CardTitle>Backend</CardTitle>
@@ -62,9 +80,17 @@ const Skills = () => {
 				</Card>
 				<Card>
 					<CardImgContainer>
-						<MdDesignServices
-							style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
-						/>
+						{theme === "dark" ? (
+							<MdDesignServices
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="white"
+							/>
+						) : (
+							<MdDesignServices
+								style={{ width: `41px`, height: `29px`, marginTop: `.5rem` }}
+								fill="black"
+							/>
+						)}
 					</CardImgContainer>
 					{/* <CardDetailsContainer> */}
 					<CardTitle>Design</CardTitle>

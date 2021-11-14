@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,11 +8,13 @@ import {
 	NavLinkItem,
 	NavLinks,
 } from "./NavbarStyles";
-import { FiSun } from "react-icons/fi";
+import { FiMoon, FiSun } from "react-icons/fi";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [navbarColor, setNavbarColor] = useState(false);
+	const [theme, setTheme] = useContext(ThemeContext);
 
 	const onMouseScroll = () => {
 		if (window.scrollY >= 48) {
@@ -26,19 +28,35 @@ const Navbar = () => {
 		window.addEventListener("scroll", onMouseScroll);
 	}, []);
 
+	const toggleTheme = () => {
+		theme === "light" ? setTheme("dark") : setTheme("light");
+	};
+
 	return (
 		<Container navbarColor={navbarColor}>
-			<Logo>
-				<Link passHref href="/">
-					<Image
-						src="/kartikeylogo.svg"
-						alt="Kartikey Logo"
-						width={55}
-						height={50}
-					/>
-				</Link>
-			</Logo>
-
+			{theme === "dark" ? (
+				<Logo>
+					<Link passHref href="/">
+						<Image
+							src="/darklogo.svg"
+							alt="Kartikey Logo"
+							width={55}
+							height={50}
+						/>
+					</Link>
+				</Logo>
+			) : (
+				<Logo>
+					<Link passHref href="/">
+						<Image
+							src="/kartikeylogo.svg"
+							alt="Kartikey Logo"
+							width={55}
+							height={50}
+						/>
+					</Link>
+				</Logo>
+			)}
 			<Hamburger open={isOpen} onClick={() => setIsOpen(!isOpen)}>
 				<div className="line1"></div>
 				<div className="line2"></div>
@@ -61,9 +79,15 @@ const Navbar = () => {
 				<Link href="#contact" passHref>
 					<NavLinkItem>Contact</NavLinkItem>
 				</Link>
-				<NavLinkItem>
-					<FiSun />
-				</NavLinkItem>
+				{theme === "dark" ? (
+					<NavLinkItem>
+						<FiMoon onClick={toggleTheme} fill="white" />
+					</NavLinkItem>
+				) : (
+					<NavLinkItem>
+						<FiSun onClick={toggleTheme} fill="black" />
+					</NavLinkItem>
+				)}
 			</NavLinks>
 		</Container>
 	);

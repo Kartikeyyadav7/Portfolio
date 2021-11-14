@@ -72,6 +72,8 @@ export const Button = styled.div`
 export const CTAButton = styled.button`
 	border-radius: 5px;
 	border: 1px solid ${(props) => props.theme.text};
+	color: ${(props) => props.theme.text};
+	background: transparent;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -124,6 +126,7 @@ export const ScrollDown = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	cursor: pointer;
 
 	@media (max-width: 1100px) {
 		left: 11.5rem;

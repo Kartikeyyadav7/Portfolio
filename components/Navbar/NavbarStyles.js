@@ -17,6 +17,7 @@ export const Container = styled.nav`
 	width: 100%;
 	padding: 3rem;
 	height: 8rem;
+	transition: background 0.5s;
 `;
 
 export const Logo = styled.div``;
@@ -91,6 +92,7 @@ export const Hamburger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
 	z-index: 999;
+	margin-top:1rem;
   }
 
   div {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,8 +15,10 @@ import {
 	Arrow,
 } from "./HeroStyles";
 import { FiArrowRight } from "react-icons/fi";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 const Hero = () => {
+	const [theme, setTheme] = useContext(ThemeContext);
 	return (
 		<>
 			<Container>
@@ -34,9 +36,25 @@ const Hero = () => {
 						</Link>
 					</Button>
 				</HeroText>
-				<HeroImg>
-					<Image src="/headlight.svg" alt="Hero Img" width={370} height={380} />
-				</HeroImg>
+				{theme === "dark" ? (
+					<HeroImg>
+						<Image
+							src="/headdark.svg"
+							alt="Hero Img"
+							width={370}
+							height={380}
+						/>
+					</HeroImg>
+				) : (
+					<HeroImg>
+						<Image
+							src="/headlight.svg"
+							alt="Hero Img"
+							width={370}
+							height={380}
+						/>
+					</HeroImg>
+				)}
 			</Container>
 			<Link href="#skills" passHref>
 				<ScrollDown>

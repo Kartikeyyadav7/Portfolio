@@ -1,10 +1,13 @@
 import Theme from "../styles/theme";
+import { ThemeProvider } from "../Context/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Theme>
-			<Component {...pageProps} />
-		</Theme>
+		<ThemeProvider>
+			<Theme>
+				<Component {...pageProps} />
+			</Theme>
+		</ThemeProvider>
 	);
 }
 

@@ -52,7 +52,7 @@ export const Card = styled.div`
 	flex: 1 0 230px;
 	max-width: 310px;
 	position: relative;
-	background-color: #dcdfea;
+	background-color: ${(props) => props.theme.secondaryColor};
 	color: #000000;
 	border-radius: 5px;
 	box-shadow: 3px 2px 14px rgba(255, 255, 255, 0.2);
@@ -72,8 +72,8 @@ export const CardImgContainer = styled.div`
 	width: 45px;
 	height: 45px;
 	border-radius: 100px;
-	background-color: #dcdfea;
-	border: 2px solid #f3f3f3;
+	background-color: ${(props) => props.theme.secondaryColor};
+	border: 2px solid ${(props) => props.theme.background};
 	position: absolute;
 	top: -10px;
 	left: 10px;
@@ -88,7 +88,7 @@ export const CardDetailsContainer = styled.div`
 	margin: 10px;
 `;
 
-export const CardTitle = styled.div`
+export const CardTitle = styled.h2`
 	font-size: 2.75rem;
 	font-weight: 700;
 	margin-bottom: 0.5rem;
@@ -111,4 +111,7 @@ export const CardContent = styled.div`
 	margin-top: 1rem;
 	gap: 1.5rem;
 	font-size: 1.7rem;
+	div {
+		color: ${(props) => props.theme.text};
+	}
 `;
