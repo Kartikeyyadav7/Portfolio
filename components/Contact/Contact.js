@@ -47,7 +47,7 @@ const Contact = () => {
 			<Line></Line>
 			<StyledFormWrapper>
 				<StyledForm
-					onSubmit={handleSubmit}
+					// onSubmit={handleSubmit}
 					name="contact kartikey"
 					method="POST"
 					data-netlify="true"
