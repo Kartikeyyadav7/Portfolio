@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Container, ItemList, Item } from "./SidebarStyles";
 import { FiInstagram, FiTwitter, FiLinkedin, FiGithub } from "react-icons/fi";
 
@@ -8,24 +7,40 @@ const Sidebar = () => {
 		<Container>
 			<ItemList>
 				<Item>
-					<Link href="" passHref>
+					<a
+						target="_blank"
+						href="https://github.com/Kartikeyyadav7"
+						rel="noopener noreferrer"
+					>
 						<FiGithub style={{ width: `20px`, height: `20px` }} />
-					</Link>
+					</a>
 				</Item>
 				<Item>
-					<Link href="" passHref>
+					<a
+						target="_blank"
+						href="https://twitter.com/kartikey_y"
+						rel="noopener noreferrer"
+					>
 						<FiTwitter style={{ width: `20px`, height: `20px` }} />
-					</Link>
+					</a>
 				</Item>
 				<Item>
-					<Link href="" passHref>
+					<a
+						target="_blank"
+						href="https://www.linkedin.com/in/kartikeyyadav/"
+						rel="noopener noreferrer"
+					>
 						<FiLinkedin style={{ width: `20px`, height: `20px` }} />
-					</Link>
+					</a>
 				</Item>
 				<Item>
-					<Link href="" passHref>
+					<a
+						target="_blank"
+						href="https://www.instagram.com/aviatecoders/"
+						rel="noopener noreferrer"
+					>
 						<FiInstagram style={{ width: `20px`, height: `20px` }} />
-					</Link>
+					</a>
 				</Item>
 			</ItemList>
 		</Container>

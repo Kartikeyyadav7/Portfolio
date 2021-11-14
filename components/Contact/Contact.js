@@ -6,7 +6,6 @@ import {
 	StyledFormWrapper,
 	StyledForm,
 	StyledInput,
-	StyledFieldset,
 	StyledButton,
 	StyledError,
 	StyledTextArea,
@@ -18,7 +17,6 @@ const initalState = {
 	name: "",
 	email: "",
 	message: "",
-	gender: "",
 };
 
 const Contact = () => {
@@ -27,8 +25,6 @@ const Contact = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log("submitted!");
-		console.log(state);
 
 		for (let key in state) {
 			if (state[key] === "") {
@@ -37,11 +33,6 @@ const Contact = () => {
 			}
 		}
 		setError("");
-		// const regex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-		// const test = regex.test(state.email);
-		// console.log(test);
-
-		console.log("Succeeded!!!");
 	};
 
 	const handleInput = (e) => {
@@ -57,9 +48,10 @@ const Contact = () => {
 			<StyledFormWrapper>
 				<StyledForm
 					onSubmit={handleSubmit}
-					name="contact"
+					name="contact kartikey"
 					method="POST"
 					data-netlify="true"
+					action="/"
 				>
 					<label htmlFor="name">Name</label>
 					<StyledInput

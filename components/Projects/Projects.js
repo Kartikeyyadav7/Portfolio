@@ -32,8 +32,17 @@ const Projects = () => {
 									<StackEle key={index}>{ele}</StackEle>
 								))}
 							</Stack>
-							<ExtButton style={{ marginRight: `2.5rem` }}>Visit</ExtButton>
-							<ExtButton>Source</ExtButton>
+							{item.visit ? (
+								<a target="_blank" href={item.visit} rel="noopener noreferrer">
+									<ExtButton style={{ marginRight: `2.5rem` }}>Visit</ExtButton>
+								</a>
+							) : (
+								<div></div>
+							)}
+
+							<a target="_blank" href={item.source} rel="noopener noreferrer">
+								<ExtButton>Source</ExtButton>
+							</a>
 						</CardContainerContent>
 						<ProjectImg>
 							<Image

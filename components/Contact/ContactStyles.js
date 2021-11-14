@@ -46,59 +46,46 @@ export const StyledFormWrapper = styled.div`
 	height: 100vh;
 	margin-top: -13rem;
 	margin-bottom: -10rem;
-	${"" /* padding: 0 20px; */}
 `;
 
 export const StyledForm = styled.form`
 	width: 100%;
 	max-width: 700px;
-	${
-		"" /* padding: 40px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-sizing: border-box;
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2); */
-	}
 `;
 
 export const StyledInput = styled.input`
 	display: block;
 	width: 100%;
-	${"" /* background-color: #eee; */}
 	background-color: ${(props) => props.theme.secondaryColor};
-
 	height: 40px;
 	border-radius: 5px;
-	border: 1px solid #ddd;
 	margin: 10px 0 20px 0;
 	padding: 20px;
-	box-sizing: border-box;
+	border: none;
 `;
 
 export const StyledTextArea = styled.textarea`
 	${"" /* background-color: #eee; */}
 	background-color: ${(props) => props.theme.secondaryColor};
-
 	width: 100%;
 	min-height: 100px;
 	resize: none;
 	${"" /* background-color: #eee; */}
 	height: 40px;
 	border-radius: 5px;
-	border: 1px solid #ddd;
 	margin: 10px 0 20px 0;
 	padding: 20px;
+	border: none;
 `;
 
 export const StyledButton = styled.button`
 	display: block;
 	background-color: ${(props) => props.theme.secondaryColor};
-	${"" /* font-size: 1.75rem; */}
-	border: 0;
 	border-radius: 5px;
 	height: 40px;
 	padding: 0 20px;
 	cursor: pointer;
+	border: none;
 `;
 
 export const StyledError = styled.div`

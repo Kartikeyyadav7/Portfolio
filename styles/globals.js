@@ -28,6 +28,8 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: ${(props) => props.theme.text}
+
   }
   li{
     list-style: none;

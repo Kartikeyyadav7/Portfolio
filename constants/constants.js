@@ -5,8 +5,8 @@ export const projects = [
 			"A website for developers to read articles about different topic software engineering topics also works as PWA",
 		image: "/image-1.svg",
 		stack: ["Nextjs", "Mdx", "Tailwind", "Node"],
-		source: "https://google.com",
-		visit: "https://google.com",
+		source: "https://github.com/Kartikeyyadav7/aviatecoders",
+		visit: "https://www.aviatecoders.com/",
 		id: 0,
 	},
 	{
@@ -15,8 +15,8 @@ export const projects = [
 			"An android app for developers to download and sign in through different service providers , read the articles and bookmark their fav ones",
 		image: "/image-2.svg",
 		stack: ["React Native", "Markdown", "Contentful CMS"],
-		source: "https://google.com",
-		visit: "https://google.com",
+		source: "https://github.com/Kartikeyyadav7/aviatecodersapp",
+		// visit: "https://google.com",
 		id: 1,
 	},
 	{
@@ -25,8 +25,8 @@ export const projects = [
 			"A ecommerce webapp for buying laptops , has features like authentication , authorization, add to cart and payment using Stripe",
 		image: "/image-3.svg",
 		stack: ["React", "Mongodb", "Nodejs", "Express"],
-		source: "https://google.com",
-		visit: "https://google.com",
+		source: "https://github.com/Kartikeyyadav7/shopulse-frontend",
+		visit: "https://shopulse.vercel.app/",
 		id: 2,
 	},
 	{
@@ -35,8 +35,8 @@ export const projects = [
 			"A Webapp for developers and designers to share their work and show to the world. It has features like authorization, authentication, posting, commenting , liking etc",
 		image: "/image-4.svg",
 		stack: ["React", "Mongodb", "Nodejs", "Express"],
-		source: "https://google.com",
-		visit: "https://google.com",
+		source: "https://github.com/Kartikeyyadav7/developerslane-frontend",
+		visit: "https://developerslane.netlify.app/",
 		id: 3,
 	},
 ];
