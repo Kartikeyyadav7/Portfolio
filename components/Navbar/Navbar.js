@@ -57,7 +57,7 @@ const Navbar = () => {
 					</Link>
 				</Logo>
 			)}
-			<Hamburger open={isOpen} onClick={() => setIsOpen(!isOpen)}>
+			<Hamburger open={isOpen} onClick={() => setIsOpen(!isOpen)} theme={theme}>
 				<div className="line1"></div>
 				<div className="line2"></div>
 				<div className="line3"></div>
