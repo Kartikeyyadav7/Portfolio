@@ -134,6 +134,10 @@ export const ScrollDown = styled.div`
 	@media (max-width: 768px) {
 		display: none;
 	}
+
+	@media only screen and (max-width: 2560px) and (min-width: 1540px) {
+		display: none;
+	}
 `;
 
 const moveDown = keyframes`
