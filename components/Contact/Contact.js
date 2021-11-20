@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import {
 	Container,
 	SectionTitle,
@@ -22,17 +23,37 @@ const initalState = {
 const Contact = () => {
 	const [state, setState] = useState(initalState);
 	const [error, setError] = useState("");
+	const router = useRouter();
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		// for (let key in state) {
+		// 	if (state[key] === "") {
+		// 		setError(`You must provide the ${key}`);
+		// 		return;
+		// 	}
+		// }
+		// setError("");
 
-		for (let key in state) {
-			if (state[key] === "") {
-				setError(`You must provide the ${key}`);
-				return;
-			}
-		}
-		setError("");
+		// https://kartikeyyadav.vercel.app/api/contact
+
+		const data = {
+			name: state.name,
+			email: state.email,
+			messageMail: state.message,
+		};
+
+		await fetch("http://localhost:3000/api/contact/", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+
+		router.push("/success");
+
+		console.log("message sent");
 	};
 
 	const handleInput = (e) => {
@@ -41,18 +62,13 @@ const Contact = () => {
 
 		setState((prev) => ({ ...prev, [inputName]: value }));
 	};
+
 	return (
 		<Container id="contact">
 			<SectionTitle>Contact Me</SectionTitle>
 			<Line></Line>
 			<StyledFormWrapper>
-				<StyledForm
-					// onSubmit={handleSubmit}
-					name="contact kartikey"
-					method="POST"
-					data-netlify="true"
-					action="/"
-				>
+				<StyledForm onSubmit={handleSubmit}>
 					<label htmlFor="name">Name</label>
 					<StyledInput
 						type="text"
