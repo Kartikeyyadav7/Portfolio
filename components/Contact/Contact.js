@@ -43,7 +43,7 @@ const Contact = () => {
 			messageMail: state.message,
 		};
 
-		await fetch("http://localhost:3000/api/contact/", {
+		await fetch("https://kartikeyyadav.vercel.app/api/contact/", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
