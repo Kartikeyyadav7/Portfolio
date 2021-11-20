@@ -62,20 +62,20 @@ export const StyledInput = styled.input`
 	margin: 10px 0 20px 0;
 	padding: 20px;
 	border: none;
+	color: ${(props) => props.theme.text};
 `;
 
 export const StyledTextArea = styled.textarea`
-	${"" /* background-color: #eee; */}
 	background-color: ${(props) => props.theme.secondaryColor};
 	width: 100%;
 	min-height: 100px;
 	resize: none;
-	${"" /* background-color: #eee; */}
 	height: 40px;
 	border-radius: 5px;
 	margin: 10px 0 20px 0;
 	padding: 20px;
 	border: none;
+	color: ${(props) => props.theme.text};
 `;
 
 export const StyledButton = styled.button`

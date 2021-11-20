@@ -46,10 +46,19 @@ const Contact = () => {
 		await fetch("https://kartikeyyadav.vercel.app/api/contact/", {
 			method: "POST",
 			headers: {
+				Accept: "application/json",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(data),
 		});
+
+		// await fetch("http://localhost:3000/api/contact/", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(data),
+		// });
 
 		router.push("/success");
 
@@ -86,6 +95,7 @@ const Contact = () => {
 
 					<label htmlFor="message">Message</label>
 					<StyledTextArea
+						type="text"
 						name="message"
 						value={state.message}
 						onChange={handleInput}
