@@ -43,7 +43,7 @@ const Contact = () => {
 			messageMail: state.message,
 		};
 
-		await fetch("https://kartikeyyadav.vercel.app/api/contact/", {
+		await fetch("https://nextjs-portfolio-backend.herokuapp.com/api/contact", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
@@ -51,14 +51,6 @@ const Contact = () => {
 			},
 			body: JSON.stringify(data),
 		});
-
-		// await fetch("http://localhost:3000/api/contact/", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(data),
-		// });
 
 		router.push("/success");
 
