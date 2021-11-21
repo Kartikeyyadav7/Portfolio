@@ -43,23 +43,23 @@ const Contact = () => {
 			messageMail: state.message,
 		};
 
-		// await fetch("https://nextjs-portfolio-backend.herokuapp.com/api/contact", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		Accept: "application/json",
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(data),
-		// });
-
-		await fetch("/api/contact", {
+		await fetch("https://nextjs-portfolio-backend.herokuapp.com/api/contact", {
 			method: "POST",
 			headers: {
-				Accept: "application/json, text/plain, */*",
+				Accept: "application/json",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(data),
 		});
+
+		// await fetch("/api/contact", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		Accept: "application/json, text/plain, */*",
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(data),
+		// });
 
 		router.push("/success");
 
