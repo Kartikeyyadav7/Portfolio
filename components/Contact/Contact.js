@@ -52,10 +52,10 @@ const Contact = () => {
 		// 	body: JSON.stringify(data),
 		// });
 
-		await fetch("https://kartikeyyadav.vercel.app/api/contact", {
+		await fetch("/api/contact", {
 			method: "POST",
 			headers: {
-				Accept: "application/json",
+				Accept: "application/json, text/plain, */*",
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(data),

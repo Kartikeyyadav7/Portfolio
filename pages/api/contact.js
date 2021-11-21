@@ -86,6 +86,7 @@ export default async (req, res) => {
 		to: "kartikeyyadav.13579@gmail.com",
 		subject: `Portfolio received message from ${name}`,
 		text: `${messageMail}`,
+
 		html: `
 			<h3>You received email from ${email}</h3>
 			<p>${messageMail}</p>
