@@ -79,16 +79,6 @@ export default async (req, res) => {
 	});
 
 	const mailData = {
-		// from: {
-		//     name: `${firstName} ${lastName}`,
-		//     address: "myEmail@gmail.com",
-		// },
-		// replyTo: email,
-		// to: "recipient@gmail.com",
-		// subject: `form message`,
-		// text: message,
-		// html: `${message}`,
-
 		from: {
 			name: `${name}`,
 			address: `${email}`,
