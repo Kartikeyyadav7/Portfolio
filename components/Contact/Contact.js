@@ -100,11 +100,11 @@ const Contact = () => {
 						name="_subject"
 						value="Portfolio contact"
 					/>
-					<StyledInput
+					{/* <StyledInput
 						type="hidden"
 						name="_autoresponse"
 						value="Hey, Thank you for contacting me, I have received your message and will reply to you soon"
-					/>
+					/> */}
 					<StyledInput type="hidden" name="_template" value="box" />
 					<label htmlFor="email">Email</label>
 					<StyledInput
