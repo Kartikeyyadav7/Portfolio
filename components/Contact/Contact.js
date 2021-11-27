@@ -37,20 +37,20 @@ const Contact = () => {
 
 		// https://kartikeyyadav.vercel.app/api/contact
 
-		const data = {
-			name: state.name,
-			email: state.email,
-			messageMail: state.message,
-		};
+		// const data = {
+		// 	name: state.name,
+		// 	email: state.email,
+		// 	messageMail: state.message,
+		// };
 
-		await fetch("https://nextjs-portfolio-backend.herokuapp.com/api/contact", {
-			method: "POST",
-			headers: {
-				Accept: "application/json",
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		});
+		// await fetch("https://nextjs-portfolio-backend.herokuapp.com/api/contact", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		Accept: "application/json",
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(data),
+		// });
 
 		// await fetch("/api/contact", {
 		// 	method: "POST",
@@ -78,7 +78,11 @@ const Contact = () => {
 			<SectionTitle>Contact Me</SectionTitle>
 			<Line></Line>
 			<StyledFormWrapper>
-				<StyledForm onSubmit={handleSubmit}>
+				<StyledForm
+					action="https://formsubmit.co/f5a8238042be8245022a2b494377a71f"
+					method="POST"
+					// onSubmit={handleSubmit}
+				>
 					<label htmlFor="name">Name</label>
 					<StyledInput
 						type="text"
@@ -86,6 +90,22 @@ const Contact = () => {
 						value={state.name}
 						onChange={handleInput}
 					/>
+					{/* <StyledInput
+						type="hidden"
+						name="_next"
+						value="https://www.kartikeyyadav.vercel.com/success"
+					/> */}
+					<StyledInput
+						type="hidden"
+						name="_subject"
+						value="Portfolio contact"
+					/>
+					<StyledInput
+						type="hidden"
+						name="_autoresponse"
+						value="Hey, Thank you for contacting me, I have received your message and will reply to you soon"
+					/>
+					<StyledInput type="hidden" name="_template" value="box" />
 					<label htmlFor="email">Email</label>
 					<StyledInput
 						type="email"
