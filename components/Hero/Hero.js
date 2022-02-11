@@ -23,7 +23,7 @@ const Hero = () => {
 		<>
 			<Container>
 				<HeroText>
-					<HeadlineBanner>frontend developer</HeadlineBanner>
+					<HeadlineBanner>FullStack developer</HeadlineBanner>
 					{/* eslint-disable-next-line react/no-unescaped-entities */}
 					<HeaderMainText>Hi, I'm Kartikey</HeaderMainText>
 					<HeaderSubText>I develop products for mobile and web</HeaderSubText>
